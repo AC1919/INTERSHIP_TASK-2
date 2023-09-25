@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    #train {
+      position: relative;
+      cursor: pointer;
+    }
+</style>
+<script> 
+$(document).ready(function() {
+    $("#start").click(function() {
+        $("img").animate({left: '850px'},2000);
+    });
+    $("#stop").click(function() {
+        $("img").stop();
+    });
+});
+</script> 
+</head>
+<body>
+<img id="train" src="image_2.png" alt="animation">
+<br>
+<button id = "start"> Start </button>
+<button id = "stop"> Stop </button>
+</body>
+</html>

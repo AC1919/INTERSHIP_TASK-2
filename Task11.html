@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form name="myForm" onsubmit="return validateForm()">
+            Name: <input type="text" name="name"><br><br>
+            Email: <input type="email" name="email"><br><br>
+            Website: <input type="text" name="website"><br><br>
+            Message: <textarea name="message" cols="30" rows="10"></textarea><br><br>                   <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+<script>
+  function validateForm(){
+  let t1= document.forms["myForm"]["name"].value;
+  let t2= document.forms["myForm"]["email"].value;
+  let t3= document.forms["myForm"]["website"].value;
+  let t4= document.forms["myForm"]["message"].value;
+  if (t1 == "" && t2== "" && t3== "" && t4== "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</html>

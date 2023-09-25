@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  .hero-image {
+  background-image: url("image_1.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+    <!--Header-->
+    
+    <div class="container-fluid bg-warning pb-4" style="display: flex;">
+        <h1><b>Builderz</b></h1>
+        <i class="fa-regular fa-calendar ms-auto" ></i>
+            <p>Opening Hour<br>Mon-Fri, 8:00-9:00</p>
+       
+            <i class="fa-solid fa-phone ms-auto" ></i>
+            <p>Call us<br>+012 345 6789</p>
+    
+            <i class="fa-solid fa-envelopes-bulk ms-auto"></i>
+            <p>Email Us<br>info@example.com</p>
+    </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ms--4  pb-5 position-fixed start-50 translate-middle"  >
+        <ul class="navbar-nav justify-content-center">
+            <a class="nav-item nav-link text-white" href='/home/'>HOME</a>
+            <a class="nav-item nav-link text-white" href='/about/'>ABOUT</a>
+            <a class="nav-item nav-link text-white" href='/service/'>SERVICE</a>
+            <a class="nav-item nav-link text-white" href='/team/'>TEAM</a>
+            <a class="nav-item nav-link text-white" href='/project/'>PROJECT</a>
+            <a class="nav-item nav-link text-white" href='/pages/'>PAGES</a>
+            <a class="nav-item nav-link text-white" href='/contact/'>CONTACT</a>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+            <a class="nav-item nav-link" href='#'>   </a>
+            <a class="nav-item nav-link" href='#'>   </a>
+            <a class="nav-item nav-link" href='#'>   </a>
+            <a class="nav-item nav-link text-white" href='#'>Get A Quote</a>
+        </ul>
+    </nav>
+    <!--Main-->
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1 style="font-size:50px">We Are Professional</h1>
+          <h3><b>For Your Dream Project</b></h3>
+          <p>GET A QUOTE</p>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="row">
+        <div class="column" style="background-color:black;">
+          <h2>Expert Worker</h2>
+          <p>Some text..</p>
+        </div>
+        <div class="column bg-warning" >
+          <h2>Quality Work</h2>
+          <p>Some text..</p>
+        </div>
+        <div class="column" style="background-color:black;">
+          <h2>24/7 Support</h2>
+          <p>Some text..</p>
+        </div>
+    </div>
+</body>
+
+</html>

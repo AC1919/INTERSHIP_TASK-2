@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-image: linear-gradient(to right,pink,yellow);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table border="1" cellpadding="5">
+            <caption>Rgistration Table</caption>
+            <form>
+                <tr>
+                    <td><label for="fn">FirstName</label></td>
+                    <td><input type="text" onkeyup="checkStrength()" id="i1" name="fn"></td>
+                    <td><span id="msg">No strength</span></td>
+                </tr>
+                <tr>
+                    <td><label for="ln">LasttName</label></td>
+                    <td><input type="text" onkeyup="checkStrength1()" id="i2" name="ln"></td>
+                    <td><span id="msg1">No strength</span></td>
+                </tr>
+                <tr>
+                    <td><label for="em">Email</label></td>
+                    <td><input type="email" onkeyup="checkStrength2()" id="i3" name="em"></td>
+                    <td><span id="msg2">No strength</span></td>
+                </tr>
+                <tr>
+                    <td> <label for="encrypt">Password</label></td>
+                    <td><input type="password" onkeyup="checkStrength3()" id="i4"  name="encrypt"></td>
+                    <td><span id="msg3">No strength</span></td>
+                </tr>
+                <tr>
+                    <td><label for="encrypt2">Re-Password</label></td>
+                    <td> <input type="password" onkeyup="checkStrength4()" id="i5" name="encrypt2"></td>
+                    <td><span id="msg4"></span></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><label for="gen">Gender</label></td>
+                    <td><input type="radio" name="gen" value="Male">
+                    <label for="gen">Male</label>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="radio" name="gen" value="Female">
+                    <label for="gen">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td><input type="number" onkeyup="checkStrength5()" id="i6" name="age"></td>
+                    <td><span id="msg5">No strength</span></td>
+
+                </tr>
+                <tr>
+                    <td><label for="ph">PhoneNumber</label></td>
+                    <td><input type="number" onkeyup="checkStrength6()" id="i7" name="ph"></td>
+                    <td><span id="msg6">No strength</span></td>
+                </tr>
+                <tr>
+                    <td><label for="add">Address</label></td>
+                    <td><textarea onkeyup="checkStrength7()" id="i8" name="add" rows="4" cols="50"></textarea></td>
+                    <td><span id="msg7">No strength</span></td>
+                </tr>
+                <tr>
+                    <td><label for="st">State</label></td>
+                    <td><input type="text" onkeyup="checkStrength8()" id="i9" name="st"></td>
+                    <td><span id="msg8">No strength</span></td>
+                </tr>
+                <tr>
+                    <td><label for="ct">Country</label></td>
+                    <td><select name="ct">
+                        <option value="Choose your country" >Chose your country</option>
+                        <option value="India">India</option>
+                        <option value="USA" >USA</option>
+                        <option value="Australia" >Australia</option>
+                        <option value="UK" >UK</option>
+                        <option value="Ireland" >Ireland</option>
+                        <option value="Jamaica" >Jamaica</option>
+                        <option value="Other" >Other</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="lang">Languages Known</label></td>
+                    <td><input type="checkbox" name="lang" value="English">
+                        <label for="lang">English</label>
+                        <input type="checkbox" name="lang" value="Kannada">
+                        <label for="lang">Kannada</label>
+                        <input type="checkbox" name="lang" value="Hindi">
+                        <label for="lang">Hindi</label>
+                        <input type="checkbox" name="lang" value="Telugu">
+                        <label for="lang">Telugu</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" name="dec" value="Hereby I declare all the given details are true">
+                        <label for="dec">Hereby I declare all the given details are true</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="log">Log in to <a href="">Ethnus </a>Website</label></td>
+                </tr>
+            </form>
+        </table>
+        <br><br>
+        <input type="button" value="Register">
+    </center>
+
+</body>
+<script>
+    function checkStrength()
+        {
+            let pwd=document.getElementById("i1").value;
+            if(pwd.length==0){
+                document.getElementById("msg").innerHTML="Poor";
+            }
+            else if(pwd.length<5){
+                document.getElementById("msg").innerHTML="Okay";
+            }
+            else{
+                document.getElementById("msg").innerHTML="Strong";
+            }
+        }
+    function checkStrength1(){
+        let pwd=document.getElementById("i2").value;
+        if(pwd.length==0){
+            document.getElementById("msg1").innerHTML="Poor";
+        }
+        else if(pwd.length<5){
+                document.getElementById("msg1").innerHTML="Okay";
+        }
+        else{
+            document.getElementById("msg1").innerHTML="Strong";
+        }
+    }
+    function checkStrength2(){
+        let pwd=document.getElementById("i3").value;
+        if(pwd.length==0){
+            document.getElementById("msg2").innerHTML="Poor";
+        }
+        else if(pwd.length<5){
+                document.getElementById("msg2").innerHTML="Okay";
+        }
+        else{
+            document.getElementById("msg2").innerHTML="Strong";
+        }
+    }
+    function checkStrength3(){
+        let pwd=document.getElementById("i4").value;
+        if(pwd.length==0){
+            document.getElementById("msg3").innerHTML="Poor";
+        }
+        else if(pwd.length<5){
+                document.getElementById("msg3").innerHTML="Okay";
+        }
+        else{
+            document.getElementById("msg3").innerHTML="Strong";
+        }
+    }
+    function checkStrength4(){
+        let pwd=document.getElementById("i5").value;
+        if(pwd==document.getElementById("i4").value){
+            document.getElementById("msg4").innerHTML="Verified";
+        }
+        else{
+            document.getElementById("msg4").innerHTML="Mismatch";
+        }
+    }
+    function checkStrength5(){
+        let pwd=document.getElementById("i6").value;
+        if(pwd.length==0){
+            document.getElementById("msg4").innerHTML="Poor";
+        }
+        else if(pwd.length<5){
+                document.getElementById("msg4").innerHTML="Okay";
+        }
+        else{
+            document.getElementById("msg4").innerHTML="Strong";
+        }
+    }
+    function checkStrength6(){
+        let pwd=document.getElementById("i7").value;
+        if(pwd.length==0){
+            document.getElementById("msg5").innerHTML="Poor";
+        }
+        else if(pwd.length<5){
+                document.getElementById("msg5").innerHTML="Okay";
+        }
+        else{
+            document.getElementById("msg5").innerHTML="Strong";
+        }
+    }
+    function checkStrength7(){
+        let pwd=document.getElementById("i8").value;
+        if(pwd.length==0){
+            document.getElementById("msg6").innerHTML="Poor";
+        }
+        else if(pwd.length<5){
+                document.getElementById("msg6").innerHTML="Okay";
+        }
+        else{
+            document.getElementById("msg6").innerHTML="Strong";
+        }
+    }
+    function checkStrength8(){
+        let pwd=document.getElementById("i9").value;
+        if(pwd.length==0){
+            document.getElementById("msg7").innerHTML="Poor";
+        }
+        else if(pwd.length<5){
+                document.getElementById("msg7").innerHTML="Okay";
+        }
+        else{
+            document.getElementById("msg7").innerHTML="Strong";
+        }
+    }
+    
+</script>
+</html>

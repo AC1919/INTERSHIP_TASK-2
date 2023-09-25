@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1><i>Instagram</i></h1>
+        <br><br>
+        <form name="myForm" onsubmit="return validateForm()">
+            <input type="text" name="name" placeholder="Username"><br><br>
+            <input type="password" name="password" placeholder="Password"><br><br>
+            <input type="submit" value="Log in">
+        </form>
+    </center>
+</body>
+<script>
+function validateForm(){
+  let t1= document.forms["myForm"]["name"].value;
+  let t2= document.forms["myForm"]["password"].value;
+  if (t1 == "" && t2== "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</html>
